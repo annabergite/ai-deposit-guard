@@ -3,12 +3,14 @@ spring:
     name: ai-deposit-guard
   ai:
     ollama:
-    base-url: http://localhost:11434
-    chat:
-      options:
-      model: qwen:7b
-  vectorstore:
-    ollama:
-      client:
       base-url: http://localhost:11434
-      collection-name: deposit_guard_laws
+      chat:
+        options:
+          model: qwen:7b
+      embedding:
+        options:
+          model: nomic-embed-text
+    chroma:
+      client:
+        base-url: http://localhost:8000
+
