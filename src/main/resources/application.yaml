@@ -1,26 +1,14 @@
 spring:
   application:
     name: ai-deposit-guard
-
-#  ai:
-#    openai:
-#      api-key: ${OPENAI_API_KEY:your-api-key-here}
-#      chat:
-#        options:
-#          model: gpt-3.5-turbo
-#          temperature: 0.7
-
-# Ollama 配置（连接本地运行的 qwen:7b）
-  spring:
-    ai:
-      ollama:
-        base-url: http://localhost:11434
-        chat:
-          options:
-            model: qwen:7b
-      # Chroma 配置（连接 Docker 容器中的向量数据库）
-      vectorstore:
-        ollama:
-          client:
-            base-url: http://localhost:11434
-          collection-name: deposit_guard_laws
+  ai:
+    ollama:
+    base-url: http://localhost:11434
+    chat:
+      options:
+      model: qwen:7b
+  vectorstore:
+    ollama:
+      client:
+      base-url: http://localhost:11434
+      collection-name: deposit_guard_laws

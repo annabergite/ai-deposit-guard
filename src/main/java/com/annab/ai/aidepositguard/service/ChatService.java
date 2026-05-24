@@ -7,6 +7,7 @@ package com.annab.ai.aidepositguard.service;
  * unavailable.
  */
 public interface ChatService {
+
     String call(String prompt);
 }
 
